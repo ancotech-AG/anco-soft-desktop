@@ -75,7 +75,7 @@ The deployment of the app is done via the following steps:
 And there you have it! A new release for the Ancotech software's desktop app!
 ![Github new release](images/new-release.png)
 
-You should now be warning about a new version of the app when opening the Ancotech software.
+You should now be warned about a new version of the app when opening the Ancotech software.
 
 ## Appendix
 
