@@ -8,7 +8,7 @@ This readme explains how to create and deploy a release as well as the related c
 
 Before deploying the Ancotech software, you have to make sure that the following pre-requisites are available and ready:
 
-1. Creating a release for the Ancotech software is currently only possible on Windows.
+1. Creating a release for the Ancotech software is currently only possible on Windows, hence Windows distribution is needed.
 2. The repository containing the Ancotech software `desktop-app` folder should be on your machine. It should be up-to-date with the `master` branch.
 3. You have `npm` installed on your machine.
 4. You have access to this repository
@@ -25,10 +25,17 @@ The schema is structured as follows:
 appId: [YOUR APP ID]
 publish:
   provider: [YOUR PROVIDER]
-  token: [YOUR ACCESS TOKEN]
+  private: [IS THE REPO PRIVATE (SPOILER: TRUE)]
 ```
 
 Every missing value of this file can be found in the secret manager app of the Ancotech software development team.
+
+## Setting up the GH Token
+
+The GitHub token need to be set as an environment variable on your building machine (the Windows one).
+Requirements:
+ - be valid for the build
+ - be called `GH_TOKEN`
 
 ## Installation
 
