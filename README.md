@@ -35,6 +35,7 @@ Every missing value of this file can be found in the secret manager app of the A
 The GitHub token need to be set as an environment variable on your building machine (the Windows one).
 Requirements:
  - be valid for the build
+ - has `repo` permission
  - be called `GH_TOKEN`
 
 ## Installation
@@ -64,8 +65,9 @@ For example: 1.2.3 is major version 1, minor version 2 and patch version 3.
 
 The deployment of the app is done via the following steps:
 
-1. Update the `version` of the `desktop-app`
-2. Execute the `package.json` deployment script
+1. Create a draft with the tag corresponding to the next version of the application (example: v1.0.1)
+3. Update the `version` of the `desktop-app` with the same version of the current draft (without the 'v' --> 1.0.1)
+4. Execute the `package.json` deployment script
 
     ```shell
     npm run electron:deploy:win
